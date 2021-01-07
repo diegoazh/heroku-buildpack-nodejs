@@ -240,6 +240,13 @@ install_bins() {
   if [[ $YARN_2 == true ]]; then
     YARN=false
   fi
+
+  # Added by DAZH
+  echo "installing express.js"
+
+  npm install -g express
+
+  echo "express version $(npm list -g | grep 'express@')"
 }
 
 header "Installing binaries" | output "$LOG_FILE"
